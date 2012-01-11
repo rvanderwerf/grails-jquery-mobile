@@ -3,7 +3,7 @@ includeTargets << grailsScript("_GrailsInit")
 target(installMobileTemplates: "Installs the jQuery-mobile scaffolding templates") {
 	depends(checkVersion, parseArguments)
 
-	sourceDir = "${jqueryMobilePluginDir}/src/templates"
+	sourceDir = "${jqueryMobileScaffoldingPluginDir}/src/templates"
 	targetDir = "${basedir}/src/templates"
 	overwrite = false
 

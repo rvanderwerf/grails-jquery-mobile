@@ -1,4 +1,4 @@
-class JqueryMobileGrailsPlugin {
+class JqueryMobileScaffoldingGrailsPlugin {
     // the plugin version
     def version = "0.1"
     // the version or versions of Grails the plugin is designed for
@@ -10,21 +10,21 @@ class JqueryMobileGrailsPlugin {
             "grails-app/views/error.gsp"
     ]
 
-    // TODO Fill in these fields
-    def author = "Your name"
-    def authorEmail = ""
-    def title = "Plugin summary/headline"
+    
+    def author = "Robert Fletcher, Sébastien Blanc"
+    def authorEmail = "scm.blanc@gmail.com"
+    def title = "JQuery Mobile Scaffolding"
     def description = '''\\
-Brief description of the plugin.
+This plugin provides mobile templates that can be used during the scaffolding process, it relies on the jquery-mobile plugin
 '''
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/jquery-mobile"
+    def documentation = "http://grails.org/plugin/jquery-mobile-scaffolding"
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before 
     }
-
+ 
     def doWithSpring = {
         // TODO Implement runtime spring config (optional)
     }
