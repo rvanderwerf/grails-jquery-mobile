@@ -8,7 +8,7 @@
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
 	<body>
-		<div data-role="header" data-position="fixed">
+		<div data-role="header" data-position="inline">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<div data-role="navbar">
 				<ul>
@@ -19,7 +19,7 @@
 		</div>
 		<div data-role="content">
 			<g:if test="\${flash.message}">
-			<div class="message">\${flash.message}</div>
+			<div class="message"><p>\${flash.message}</p></div>
 			</g:if>
 			<ul data-role="listview" data-split-icon="gear" data-filter="true">
 				<g:each in="\${${propertyName}List}" status="i" var="${propertyName}">
@@ -28,10 +28,10 @@
 						<g:link action="edit" id="\${${propertyName}.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
 					</li>
 				</g:each>
-			</ol>
-			<fieldset class="pagination">
-				<g:paginate total="\${${propertyName}Total}" />
-			</fieldset>
+				<g:if test="\${showMoreSize > 0}"> 
+					<g:link data-role="button" action="list" params="[max:max]">Show \${showMoreSize} More</g:link> 
+				</g:if> 
+			</ul>
 		</div>
 		<div data-role="footer">
 		</div>
