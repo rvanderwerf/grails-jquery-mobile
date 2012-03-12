@@ -9,7 +9,7 @@
         <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
     <body>
-		<div data-role="header" data-position="fixed">
+		<div data-role="header" data-position="inline">
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 			<div data-role="navbar">
 				<ul>
@@ -20,7 +20,7 @@
 		</div>
 		<div data-role="content">
 			<g:if test="\${flash.message}">
-			<div class="message" role="alert">\${flash.message}</div>
+			<div class="message" role="alert"><p>\${flash.message}</p></div>
 			</g:if>
 			<g:hasErrors bean="\${${propertyName}}">
 			<div class="errors" role="alert">

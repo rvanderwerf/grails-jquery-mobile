@@ -8,7 +8,7 @@
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
     <body>
-		<div data-role="header" data-position="fixed">
+		<div data-role="header" data-position="inline">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<div data-role="navbar">
 				<ul>
@@ -19,7 +19,7 @@
 		</div>
 		<div data-role="content">
 			<g:if test="\${flash.message}">
-			<div class="message">\${flash.message}</div>
+			<div class="message"><p>\${flash.message}</p></div>
 			</g:if>
 			<dl>
 			<%  excludedProps = Event.allEvents.toList() << 'version'
